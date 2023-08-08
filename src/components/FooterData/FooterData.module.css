@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+:root {
+	--primaryWidth: 3.5rem;
+	--primaryHeight: calc(var(--primaryWidth) * 10 / 7);
+	--primaryFont: "Ubuntu", sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	/* background-color: lightblue; */
+	width: var(--primaryWidth);
+	min-height: var(--primaryHeight);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	font-family: var(--primaryFont);
+}
+
+.day {
+	font-size: 1rem;
+}
+
+.icon {
+	width: 50%;
+}
+
+.weatherDescription {
+	font-size: 0.8rem;
+	text-align: center;
+	/* white-space: nowrap; */
+	text-transform: capitalize;
+}

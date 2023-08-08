@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+:root {
+	--primaryFont: "Ubuntu", sans-serif;
+	--primaryDimension: 3rem;
+	--primaryFontSize: calc(var(--primaryDimension) / 2);
+	--primaryBorderRadius: calc(var(--primaryDimension) * 7 / 40);
+	--placeholderColor: #000000;
+	--inputColor: #000000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	/* background-color: lightpink; */
+	display: flex;
+	min-width: 200px;
+}
+
+.icon {
+	width: var(--primaryDimension);
+	height: var(--primaryDimension);
+	font-family: var(--primaryFont);
+	color: #fff;
+	font-size: var(--primaryFontSize);
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.7rem;
+	border: 3px solid #fff;
+	opacity: 0.3;
+	transition: 0.3s opacity, 0.3s transform;
+}
+
+.icon:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.inactive {
+	transform: translateX(-50%);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mainInput {
+	color: #fff;
+	color: var(--inputColor);
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.3s opacity, 0.3s transform;
+	transform: translateX(50%);
+	font-size: 1.3rem;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-family: var(--primaryFont);
+	font-style: italic;
+}
+
+.mainInput::placeholder {
+	color: var(--placeholderColor);
+	font-style: italic;
+	opacity: 0.5;
+}
+
+.mainInput.active {
+	display: inline-block;
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateX(calc(0% - var(--primaryDimension)));
+}

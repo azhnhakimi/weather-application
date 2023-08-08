@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:wght@400;700&display=swap");
+:root {
+	--thunderstorm: linear-gradient(
+		180deg,
+		rgba(43, 30, 47, 1) 0%,
+		rgba(139, 67, 79, 1) 100%
+	);
+	--cloudy: linear-gradient(
+		180deg,
+		rgba(14, 40, 43, 1) 0%,
+		rgba(114, 145, 149, 1) 100%
+	);
+	--rain: linear-gradient(
+		180deg,
+		rgba(9, 46, 114, 1) 0%,
+		rgba(122, 139, 180, 1) 100%
+	);
+	--snow: linear-gradient(
+		180deg,
+		rgba(89, 152, 255, 1) 0%,
+		rgba(194, 233, 252, 1) 100%
+	);
+	--atmosphere: linear-gradient(
+		180deg,
+		rgba(128, 128, 128, 1) 0%,
+		rgba(169, 169, 169, 1) 100%
+	);
+	--clear: linear-gradient(
+		180deg,
+		rgba(64, 207, 234, 1) 42%,
+		rgba(225, 227, 195, 1) 100%
+	);
+	--drizzle: linear-gradient(
+		180deg,
+		rgba(89, 129, 125, 1) 0%,
+		rgba(171, 209, 201, 1) 100%
+	);
+	--primaryBackground: #ffffff;
+	--borderTopColor: #fff;
+	--primaryColor: #fff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.mainContainer {
+	background: var(--sun);
+	width: 90%;
+	max-width: 450px;
+	min-height: 650px;
+	height: 95%;
+	border-radius: 0.3rem;
+	box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 1em;
+	position: relative;
+}
+
+.locationContainer {
+	position: absolute;
+	top: 0.8rem;
+	left: 0.8rem;
+}
+
+.mainFooterContainer {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1em;
+	border-top: solid 2px;
+	border-top-color: var(--borderTopColor);
+}
+
+.primaryDay {
+	text-align: center;
+	/* background-color: red; */
+	font-family: "Ubuntu", sans-serif;
+	color: var(--primaryColor);
+	position: absolute;
+	bottom: 65%;
+}
+
+.temperature {
+	font-size: 7rem;
+	position: relative;
+}
+
+.temperature::after {
+	content: " \00B0";
+	position: absolute;
+}
+
+.dayDescription {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+
+.information {
+	padding-bottom: 1em;
+	/* background-color: red; */
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.subInfo {
+	/* background-color: green; */
+	max-width: min-content;
+}
+
+.location {
+	font-family: "Oswald", sans-serif;
+	text-transform: capitalize;
+	color: var(--primaryColor);
+	font-size: 1.7rem;
+}
+
+.dayDisplay {
+	font-family: "Ubuntu", sans-serif;
+	color: var(--primaryColor);
+	font-size: 1rem;
+}
+
+.icon {
+	/* background-color: pink; */
+	width: 19%;
+}
