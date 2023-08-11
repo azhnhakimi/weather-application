@@ -26,7 +26,7 @@ const Card = () => {
 		if (location) {
 			axios
 				.get(
-					`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`
+					`https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`
 				)
 				.then((res) => setGeoCoordinates(res.data))
 				.catch((err) => console.log(err));
