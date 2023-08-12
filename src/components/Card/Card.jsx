@@ -6,7 +6,7 @@ import { getContainerStyle, getIconColor, getTextColor } from "../../helpers";
 import Location from "../Location/Location";
 
 const Card = () => {
-	const apiKey = "fabd0680cafbb21a09efe3f07d816826";
+	const apiKey = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
 
 	const [latitude, setLatitude] = useState(null);
 	const [longitude, setLongitude] = useState(null);
